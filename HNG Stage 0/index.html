@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNG STAGE 0 Blog Post</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-neutral-950 flex items-center justify-center min-h-screen text-center text-slate-300">
+    <main class="bg-neutral-900 rounded-xl w-11/12 md:w-105 p-8 font-bold">
+        <header>
+            <img data-testid="profilePicture" class="w-45 h-45 bg-green-100 m-auto mb-4 rounded-full"
+                src="./stephen.jpg" alt="Stephen Adewale">
+            <h1 class="text-4xl font-bold" data-testid="fullName">Adewale Stephen</h1>
+            <p class="text-xl" data-testid="currentLocation">Ogbomoso, Oyo Nigeria</p>
+        </header>
+        <p class="my-6 text-orange-500">
+            <span data-testid="shortBio">Creative </span>
+            <span data-testid="jobTitle">Frontend Developer</span>
+        </p>
+        <div class="flex flex-col gap-3">
+            <a href="mailto:codewithme.stephen@gmail.com" data-testid="emailAddress">
+                <button class="block p-3  bg-neutral-700 w-full rounded-lg cursor-pointer">Gmail</button>
+            </a>
+            <a href="//www.linkedin.com/in/codewithstephen/" data-testid="socialLinks">
+                <button class="block p-3  bg-neutral-700 w-full rounded-lg cursor-pointer">LinkedIn</button>
+            </a>
+            <a href="//github.com/DemoStephen" data-testid="socialLinks">
+                <button class="block p-3  bg-neutral-700 w-full rounded-lg cursor-pointer">GitHub</button>
+            </a>
+            <a href="//x.com/codewithstephen" data-testid="socialLinks">
+                <button class="block p-3  bg-neutral-700 w-full rounded-lg cursor-pointer">Twitter</button>
+            </a>
+        </div>
+        <footer class="mt-4 italic font-medium text-sm">
+            <p id="currentTimeUTC" data-testid="currentTimeUTC"></p>
+        </footer>
+
+    </main>
+    <script>
+        const currentDate = new Date().toUTCString();
+        document.getElementById('currentTimeUTC').innerText = currentDate;
+    </script>
+</body>
+
+</html>
